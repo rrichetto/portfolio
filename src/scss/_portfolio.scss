@@ -1,15 +1,60 @@
 .portfolio {
-  margin-top: 5rem;
-  padding: 3rem 0;
+  margin-top: 4rem;
+  padding: 2rem 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 
-  border: 1px solid red;
+  @media (max-width: 735px) {
+    margin-top: 1.5rem;
+  }
+
+  @media (max-width: 420px) {
+    margin-top: 0;
+  }
 
   &__project-box {
     height: 30rem;
-    flex: 0 0 30rem;
-    border: 1px solid blue;
+    margin: 1.8rem;
+    flex: 1 0 30rem;
+    background-color: #8f99ac;
+    border-radius: 1rem;
+    box-shadow: .5rem .5rem 1.5rem rgba(0, 0, 0, .2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all .4s;
+
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
+    &--1 {
+      background: linear-gradient(rgba(0, 0, 0, 0.6),
+                                  rgba(0, 0, 0, 0.6)),
+                                  url('../img/mgkk.jpeg')
+                                  no-repeat center center/cover;
+
+      // background: url('../img/mgkk.jpeg') no-repeat center center/cover;
+    }
+
+    &--2 {
+      background: linear-gradient(rgba(0, 0, 0, 0.4),
+                                  rgba(0, 0, 0, 0.4)),
+                                  url('../img/clipboard.png')
+                                  no-repeat center center/cover;
+
+      // background: url('../img/clipboard.png') no-repeat center center/cover;
+    }
+  }
+
+  &__project-title {
+    font-size: 3rem;
+    color: #fff;
+    padding: 0 2.5rem;
+    text-align: center;
   }
 }
