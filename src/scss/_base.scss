@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-shadow: border-box;
+  background-color: $color-primary;
+  color: $color-secondary;
+  font-family: $font-primary;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  max-width: 115rem;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}

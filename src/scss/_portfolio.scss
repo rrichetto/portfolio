@@ -1,0 +1,15 @@
+.portfolio {
+  margin-top: 5rem;
+  padding: 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  border: 1px solid red;
+
+  &__project-box {
+    height: 30rem;
+    flex: 0 0 30rem;
+    border: 1px solid blue;
+  }
+}

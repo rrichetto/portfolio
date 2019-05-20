@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+body {
+  box-shadow: border-box;
+  background-color: #f8f4f1;
+  color: #434F67;
+  font-family: "Rubik", sans-serif; }
+
+html {
+  font-size: 62.5%; }
+
+.container {
+  max-width: 115rem;
+  margin: 0 auto;
+  padding: 0 2.5rem; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0; }
+  .header__name-box {
+    display: flex;
+    flex-direction: column; }
+  .header__name {
+    font-size: 5.5rem;
+    font-weight: 700;
+    letter-spacing: .2rem; }
+  .header__profession {
+    font-size: 2.7rem;
+    font-weight: 300; }
+
+.nav {
+  font-size: 2.1rem; }
+  .nav__list {
+    list-style: none; }
+  .nav__item {
+    display: inline-block; }
+  .nav__link:link, .nav__link:visited {
+    color: #434F67;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    padding: .7rem 0;
+    margin: 0 2.5rem;
+    text-transform: uppercase;
+    border-bottom: 4px solid #434F67;
+    transition: all .2s; }
+    .nav__link:link:hover, .nav__link:visited:hover {
+      background-color: #434F67;
+      color: #f8f4f1;
+      margin: 0 1.5rem;
+      padding: .7rem 1rem; }
+
+.portfolio {
+  margin-top: 5rem;
+  padding: 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid red; }
+  .portfolio__project-box {
+    height: 30rem;
+    flex: 0 0 30rem;
+    border: 1px solid blue; }
