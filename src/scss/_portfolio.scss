@@ -1,60 +1,98 @@
-.portfolio {
+.work {
   margin-top: 4rem;
   padding: 2rem 0;
+
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 
-  @media (max-width: 735px) {
-    margin-top: 1.5rem;
-  }
+  &__project {
+    position: relative;
 
-  @media (max-width: 420px) {
-    margin-top: 0;
-  }
-
-  &__project-box {
-    height: 30rem;
-    margin: 1.8rem;
-    flex: 1 0 30rem;
-    background-color: #8f99ac;
+    flex: 0 0 48%;
+    margin-top: 4.5rem;
     border-radius: 1rem;
-    box-shadow: .5rem .5rem 1.5rem rgba(0, 0, 0, .2);
+    box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, .4);
+    border: none;
+    background-color: $color-secondary;
+    overflow: hidden;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    transition: all .4s;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba($color-secondary, 0.95);
+      opacity: 0;
+      transition: all .3s;
+    }
+
+    &:hover:after {
+      opacity: 1;
+    }
+
+    &:hover .work__content {
+      opacity: 1;
+      z-index: 999;
+    }
+  }
+
+  &__img-box {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    opacity: 0;
+    transition: all .3s;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-size: 2rem;
+  }
+
+  &__links {
+    margin-top: 4rem;
+  }
+
+  &__site,
+  &__code {
+    font-size: 1.6rem;
+    color: #555;
+    padding: 1rem 1.5rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    text-decoration: none;
+    transition: all .3s;
 
     &:hover {
-      transform: scale(1.1);
       cursor: pointer;
-    }
-
-    &--1 {
-      background: linear-gradient(rgba(0, 0, 0, 0.6),
-                                  rgba(0, 0, 0, 0.6)),
-                                  url('../img/mgkk.jpeg')
-                                  no-repeat center center/cover;
-
-      // background: url('../img/mgkk.jpeg') no-repeat center center/cover;
-    }
-
-    &--2 {
-      background: linear-gradient(rgba(0, 0, 0, 0.4),
-                                  rgba(0, 0, 0, 0.4)),
-                                  url('../img/clipboard.png')
-                                  no-repeat center center/cover;
-
-      // background: url('../img/clipboard.png') no-repeat center center/cover;
+      background-color: #ccc;
+      color: black;
     }
   }
 
-  &__project-title {
-    font-size: 3rem;
-    color: #fff;
-    padding: 0 2.5rem;
-    text-align: center;
+  &__code {
+    margin-left: 2rem;
   }
 }
