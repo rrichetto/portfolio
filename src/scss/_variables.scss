@@ -2,3 +2,12 @@ $color-primary: #434F67;
 $color-secondary: #f8f4f1;
 
 $font-primary: 'Rubik', sans-serif;
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+}
+  100% {
+    opacity: 1;
+  }
+}
