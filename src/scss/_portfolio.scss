@@ -41,11 +41,13 @@
       transition: all .3s;
     }
 
-    &:hover:after {
+    &:hover:after,
+    &:active:after {
       opacity: 1;
     }
 
-    &:hover .work__content {
+    &:hover .work__content,
+    &:active .work__content {
       opacity: 1;
       z-index: 999;
     }
@@ -116,7 +118,8 @@
     }
 
 
-    &:hover {
+    &:hover,
+    &:active {
       cursor: pointer;
       background-color: #ccc;
       color: black;
