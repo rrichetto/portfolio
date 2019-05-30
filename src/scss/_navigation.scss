@@ -1,0 +1,42 @@
+.nav {
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    display: inline-block;
+
+    &:last-of-type {
+      margin-left: 2rem;
+    }
+  }
+
+  &__link {
+    color: $color-primary;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    transition: all .5s;
+    border-radius: 3rem;
+
+    &:hover {
+      color: $color-secondary;
+      background-color: $color-primary;
+    }
+  }
+
+  &__cta {
+    color: $color-secondary;
+    background-color: $color-primary;
+
+    &:hover {
+      background-color: lighten($color-primary, 10%);
+    }
+  }
+}

@@ -1,20 +1,19 @@
 .work {
-  margin-top: 4rem;
-  padding: 2rem 0;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  margin-top: 4rem;
 
   &__project {
     position: relative;
 
     flex: 0 0 48%;
-    margin-top: 4.5rem;
+    margin-bottom: 4.5rem;
     border-radius: 1rem;
     box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, .4);
     border: none;
-    background-color: $color-secondary;
+    background-color: $color-primary;
     overflow: hidden;
 
 
@@ -25,7 +24,7 @@
       height: 100%;
       top: 0;
       left: 0;
-      background: rgba($color-secondary, 0.95);
+      background: rgba($color-primary, 0.95);
       opacity: 0;
       transition: all .3s;
     }
