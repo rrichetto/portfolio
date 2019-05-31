@@ -42,12 +42,12 @@
     }
 
     &:hover:after,
-    &:active:after {
+    &:focus:after {
       opacity: 1;
     }
 
     &:hover .work__content,
-    &:active .work__content {
+    &:focus .work__content {
       opacity: 1;
       z-index: 999;
     }
@@ -118,8 +118,7 @@
     }
 
 
-    &:hover,
-    &:active {
+    &:hover {
       cursor: pointer;
       background-color: #ccc;
       color: black;

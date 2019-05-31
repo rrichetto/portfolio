@@ -143,10 +143,9 @@ html {
       background: rgba(67, 79, 103, 0.95);
       opacity: 0;
       transition: all .3s; }
-    .work__project:hover:after, .work__project:active:after {
+    .work__project:hover:after {
       opacity: 1; }
-    .work__project:hover .work__content,
-    .work__project:active .work__content {
+    .work__project:hover .work__content {
       opacity: 1;
       z-index: 999; }
   .work__img-box {
@@ -195,7 +194,7 @@ html {
       .work__site, .work__code {
         font-size: 1.4rem;
         padding: .75rem 1rem; } }
-    .work__site:hover, .work__site:active, .work__code:hover, .work__code:active {
+    .work__site:hover, .work__code:hover {
       cursor: pointer;
       background-color: #ccc;
       color: black; }
