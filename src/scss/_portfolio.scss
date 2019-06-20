@@ -41,13 +41,11 @@
       transition: all .3s;
     }
 
-    &:hover:after,
-    &:focus:after {
+    &:hover:after {
       opacity: 1;
     }
 
-    &:hover .work__content,
-    &:focus .work__content {
+    &:hover .work__content {
       opacity: 1;
       z-index: 999;
     }
