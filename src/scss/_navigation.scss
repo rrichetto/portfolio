@@ -34,7 +34,10 @@
       right: 0rem;
       width: 20rem;
       text-align: center;
-      background-color: darken($color-secondary, 10%);
+      background-color: #fff;
+      border-radius: .5rem;
+      overflow: hidden;
+
       z-index: 9;
       animation: fadeIn .3s;
     }
@@ -61,10 +64,6 @@
     &:hover {
       color: $color-secondary;
       background-color: $color-primary;
-
-      @media (max-width: 950px) {
-        // background-color: inherit;
-      }
     }
   }
 
@@ -74,7 +73,7 @@
 
     @media (max-width: 950px) {
       color: $color-primary;
-      background-color: darken($color-secondary, 10%);
+      background-color: #fff;
       border-top: 1px solid $color-primary;
     }
   }

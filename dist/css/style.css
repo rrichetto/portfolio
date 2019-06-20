@@ -79,7 +79,9 @@ html {
       right: 0rem;
       width: 20rem;
       text-align: center;
-      background-color: #e7d9cf;
+      background-color: #fff;
+      border-radius: .5rem;
+      overflow: hidden;
       z-index: 9;
       animation: fadeIn .3s; } }
   .nav__link {
@@ -107,7 +109,7 @@ html {
     @media (max-width: 950px) {
       .nav__cta {
         color: #434F67;
-        background-color: #e7d9cf;
+        background-color: #fff;
         border-top: 1px solid #434F67; } }
 
 .work {
@@ -118,9 +120,20 @@ html {
   @media (max-width: 900px) {
     .work {
       flex-direction: column; } }
-  @media (max-width: 600px) {
-    .work {
-      margin-top: 2rem; } }
+  .work__client {
+    position: absolute;
+    font-size: 1.8rem;
+    padding: 0.5rem .25rem;
+    top: -3.2rem;
+    right: 2rem;
+    width: 15rem;
+    background-color: #6f80a1;
+    color: #fff;
+    text-align: center;
+    border-radius: 2rem 2rem 0 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: .1rem; }
   .work__project {
     position: relative;
     flex: 0 0 48%;
@@ -128,11 +141,7 @@ html {
     border-radius: 1rem;
     box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.4);
     border: none;
-    background-color: #434F67;
-    overflow: hidden; }
-    @media (max-width: 600px) {
-      .work__project {
-        margin-bottom: 2rem; } }
+    background-color: #434F67; }
     .work__project:after {
       content: '';
       position: absolute;
@@ -142,7 +151,11 @@ html {
       left: 0;
       background: rgba(67, 79, 103, 0.95);
       opacity: 0;
-      transition: all .3s; }
+      transition: all .3s;
+      border-radius: 1rem; }
+      @media (max-width: 900px) {
+        .work__project:after {
+          display: none; } }
     .work__project:hover:after {
       opacity: 1; }
     .work__project:hover .work__content {
@@ -150,10 +163,15 @@ html {
       z-index: 999; }
   .work__img-box {
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    border-radius: 1rem; }
   .work__img {
     display: block;
-    width: 100%; }
+    width: 100%;
+    border-radius: 1rem; }
+    @media (max-width: 900px) {
+      .work__img {
+        border-radius: 1rem 1rem 0 0; } }
   .work__content {
     position: absolute;
     top: 50%;
@@ -164,23 +182,28 @@ html {
     opacity: 0;
     transition: all .3s;
     text-align: center; }
+    @media (max-width: 900px) {
+      .work__content {
+        position: relative;
+        top: 0rem;
+        opacity: 1;
+        width: 95%; } }
   .work__title {
     font-size: 3rem;
     margin-bottom: 1rem; }
-    @media (max-width: 450px) {
+    @media (max-width: 900px) {
       .work__title {
-        font-size: 2.3rem;
-        margin-bottom: 0; } }
+        display: none; } }
   .work__description {
     font-size: 2rem; }
-    @media (max-width: 450px) {
+    @media (max-width: 900px) {
       .work__description {
-        font-size: 1.6rem; } }
+        display: none; } }
   .work__links {
     margin-top: 4rem; }
-    @media (max-width: 450px) {
+    @media (max-width: 900px) {
       .work__links {
-        margin-top: 2.5rem; } }
+        padding: 1rem 0; } }
   .work__site, .work__code {
     font-size: 1.6rem;
     color: #555;
@@ -192,9 +215,13 @@ html {
     margin: 0 1rem; }
     @media (max-width: 450px) {
       .work__site, .work__code {
-        font-size: 1.4rem;
-        padding: .75rem 1rem; } }
+        margin: 0 .5rem; } }
+    @media (max-width: 360px) {
+      .work__site, .work__code {
+        font-size: 1.3rem; } }
     .work__site:hover, .work__code:hover {
       cursor: pointer;
-      background-color: #ccc;
+      background-color: #f8f4f1;
       color: black; }
+    .work__site i, .work__code i {
+      margin-left: .25rem; }
